@@ -1,5 +1,12 @@
+# 顶层模块（module app.py）
 import streamlit as st
 import openai
+
+# 新增：用于 HTML 处理与本地打开的依赖
+import re
+import os
+import webbrowser
+from pathlib import Path  # 新增：使用 pathlib 构建 Windows 上合法的 file:// URI
 
 # --- UI 设置 ---
 st.set_page_config(page_title="Trae AI Chat", page_icon="🤖")
@@ -39,10 +46,32 @@ def get_openai_client(api_key, model):
 
 client = get_openai_client(api_key, selected_model)
 
+# 新增：HTML 提取函数（支持 ```html```、<html>...</html>、<body>...</body>）
+def extract_html_from_text(text: str):
+    blocks = []
+    if not text:
+        return blocks
+    # 1) 三引号 fenced code，标记为 html
+    for m in re.finditer(r"```(?:html|HTML)\s*([\s\S]*?)```", text, flags=re.MULTILINE):
+        blocks.append(m.group(1).strip())
+    # 2) 直接的 <html>...</html>
+    if not blocks:
+        for m in re.finditer(r"(<\s*html[\s\S]*?</\s*html\s*>)", text, flags=re.IGNORECASE):
+            blocks.append(m.group(1).strip())
+    # 3) 只有 <body> 片段时，包一层基础 HTML
+    if not blocks:
+        for m in re.finditer(r"(<\s*body[\s\S]*?</\s*body\s*>)", text, flags=re.IGNORECASE):
+            body = m.group(1).strip()
+            blocks.append(f"<!DOCTYPE html>\n<html>\n{body}\n</html>")
+    return blocks
+
 # --- 聊天记录管理 ---
 # 初始化聊天记录
 if "messages" not in st.session_state:
     st.session_state.messages = []
+# 新增：存放最新提取的 HTML，用于下方预览/下载
+if "last_html" not in st.session_state:
+    st.session_state.last_html = None
 
 # 显示历史消息
 for message in st.session_state.messages:
@@ -85,6 +114,13 @@ if prompt := st.chat_input("你好，有什么可以帮你的吗？"):
             # 将完整的助手响应添加到聊天记录
             st.session_state.messages.append({"role": "assistant", "content": response})
 
+            # 新增：从助手回复中提取 HTML，供下方预览/下载使用
+            html_blocks = extract_html_from_text(response)
+            if html_blocks:
+                st.session_state.last_html = html_blocks[0]  # 优先展示第一个匹配
+            else:
+                st.session_state.last_html = None
+
         except openai.APIConnectionError as e:
             st.error(f"API 连接错误: {e.__cause__}")
         except openai.RateLimitError:
@@ -93,3 +129,34 @@ if prompt := st.chat_input("你好，有什么可以帮你的吗？"):
             st.error(f"API 状态错误: {e.status_code} - {e.response}")
         except Exception as e:
             st.error(f"发生未知错误: {e}")
+
+# --- HTML 预览与下载（位于聊天区域下方） ---
+if st.session_state.get("last_html"):
+    st.markdown("---")
+    st.subheader("HTML 预览")
+    st.components.v1.html(st.session_state.last_html, height=600, scrolling=True)
+
+    # 下载为 index.html
+    st.download_button(
+        "下载为 index.html",
+        data=st.session_state.last_html,
+        file_name="index.html",
+        mime="text/html",
+    )
+
+    # （可选）本地运行时，提供按钮在浏览器中打开
+    # 通过 server.address 判断是否为本地环境
+    server_address = None
+    try:
+        server_address = st.get_option("server.address")
+    except Exception:
+        pass
+    is_local = server_address in ("localhost", "127.0.0.1")
+    if is_local and st.button("在浏览器中打开 index.html"):
+        file_path = r"c:\Users\13248\Desktop\Physics\index.html"
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write(st.session_state.last_html)
+        # 使用 file:// 协议打开本地文件
+        # 修复：避免 f-string 表达式中出现反斜杠，使用 pathlib 生成合法的 URI
+        uri = Path(file_path).resolve().as_uri()
+        webbrowser.open(uri)
