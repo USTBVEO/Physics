@@ -7,6 +7,7 @@ import re
 import os
 import webbrowser
 from pathlib import Path  # 新增：使用 pathlib 构建 Windows 上合法的 file:// URI
+import json  # 新增：导入/导出聊天记录
 
 # --- UI 设置 ---
 st.set_page_config(page_title="Trae AI Chat", page_icon="🤖")
@@ -24,6 +25,29 @@ with st.sidebar:
     selected_model = st.selectbox("选择模型", model_options, index=1)
     
     st.markdown("---")
+    # 新增：聊天记录导出/导入
+    export_json = json.dumps(st.session_state.get("messages", []), ensure_ascii=False, indent=2)
+    st.download_button(
+        "导出聊天记录 JSON",
+        data=export_json,
+        file_name="chat_history.json",
+        mime="application/json",
+        help="下载当前会话的聊天记录为 JSON 文件"
+    )
+
+    uploaded = st.file_uploader("导入聊天记录 JSON", type=["json"], help="上传之前导出的 chat_history.json")
+    if uploaded and st.button("加载记录"):
+        try:
+            content = uploaded.read().decode("utf-8")
+            data = json.loads(content)
+            if isinstance(data, list) and all(isinstance(x, dict) and "role" in x and "content" in x for x in data):
+                st.session_state.messages = data
+                st.success("导入成功，聊天记录已加载。")
+                st.rerun()
+            else:
+                st.warning("JSON 格式不正确：应为包含 role 与 content 字段的对象列表。")
+        except Exception as e:
+            st.error(f"导入失败：{e}")
     st.markdown("不知道如何获取 API Key？")
     st.page_link("https://platform.openai.com/api-keys", label="OpenAI API Key", icon="🔑")
     st.page_link("https://platform.deepseek.com/api_keys", label="DeepSeek API Key", icon="🔑")
@@ -120,6 +144,9 @@ if prompt := st.chat_input("你好，有什么可以帮你的吗？"):
                 st.session_state.last_html = html_blocks[0]  # 优先展示第一个匹配
             else:
                 st.session_state.last_html = None
+
+            # 新增：确保侧边栏的“导出聊天记录 JSON”包含最新一条消息
+            st.rerun()
 
         except openai.APIConnectionError as e:
             st.error(f"API 连接错误: {e.__cause__}")
