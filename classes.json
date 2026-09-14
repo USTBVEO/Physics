@@ -1,0 +1,92 @@
+{
+  "classes": [
+    {
+      "id": "class-1",
+      "name": "高一 1 班",
+      "order": 1,
+      "week_theme": "加速度",
+      "today": "加速度方向",
+      "experiment": "手机传感器测量电梯加速度",
+      "lesson_count": 10,
+      "note": "",
+      "weekly_plan": [
+        {
+          "title": "速度变化量",
+          "status": "done"
+        },
+        {
+          "title": "加速度概念",
+          "status": "done"
+        },
+        {
+          "title": "加速度方向",
+          "status": "current"
+        },
+        {
+          "title": "匀变速直线运动初步",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "id": "class-2",
+      "name": "高一 2 班",
+      "order": 2,
+      "week_theme": "加速度",
+      "today": "加速度方向",
+      "experiment": "手机传感器测量电梯加速度",
+      "lesson_count": 10,
+      "note": "",
+      "weekly_plan": [
+        {
+          "title": "速度变化量",
+          "status": "done"
+        },
+        {
+          "title": "加速度概念",
+          "status": "done"
+        },
+        {
+          "title": "加速度方向",
+          "status": "current"
+        },
+        {
+          "title": "匀变速直线运动初步",
+          "status": "todo"
+        }
+      ],
+      "done": [],
+      "next_lesson": "",
+      "week_experiment": "",
+      "progress": 0.0
+    },
+    {
+      "id": "class-3",
+      "name": "高一 3 班",
+      "order": 3,
+      "week_theme": "加速度",
+      "today": "加速度概念巩固",
+      "experiment": "手机传感器测量电梯加速度",
+      "lesson_count": 9,
+      "note": "本周三因活动课调课一次",
+      "weekly_plan": [
+        {
+          "title": "速度变化量",
+          "status": "done"
+        },
+        {
+          "title": "加速度概念",
+          "status": "current"
+        },
+        {
+          "title": "加速度方向",
+          "status": "todo"
+        },
+        {
+          "title": "匀变速直线运动初步",
+          "status": "todo"
+        }
+      ]
+    }
+  ]
+}

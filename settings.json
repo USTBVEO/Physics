@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "site": {
+    "title": "杨威的物理课堂",
+    "subtitle": "PHYSICS · 与你一起成长三年",
+    "grade_start_year": 2026
+  },
+  "semesters": [
+    {
+      "id": "2026-2027-1",
+      "name": "高一上学期",
+      "start": "2026-09-01",
+      "end": "2027-01-29",
+      "first_teaching_monday": "2026-08-31"
+    },
+    {
+      "id": "2026-2027-2",
+      "name": "高一下学期",
+      "start": "2027-03-01",
+      "end": "2027-07-09",
+      "first_teaching_monday": "2027-02-22"
+    }
+  ],
+  "holiday_weeks": [
+    "2026-10-05"
+  ],
+  "exams": [
+    {
+      "name": "期中考试",
+      "date": "2026-11-05"
+    },
+    {
+      "name": "期末考试",
+      "date": "2027-01-18"
+    }
+  ],
+  "featured_image_id": "img-2026w03-6ca9",
+  "today_question_id": null
+}

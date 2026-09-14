@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "events": [
+    {
+      "id": "ev-2026-first",
+      "date": "2026-09-01",
+      "type": "第一次",
+      "title": "第一次物理课",
+      "description": "三个班的第一节物理课。从「什么是运动」开始，开启三年的物理旅程。",
+      "class_ids": ["class-1", "class-2", "class-3"],
+      "photos": [],
+      "teacher_note": ""
+    },
+    {
+      "id": "ev-2026-screen",
+      "date": "2026-09-14",
+      "type": "第一次",
+      "title": "课堂大屏第一次点亮",
+      "description": "「杨威的物理课堂」网站正式上线教室大屏。",
+      "class_ids": ["class-1", "class-2", "class-3"],
+      "photos": [],
+      "teacher_note": ""
+    }
+  ]
+}

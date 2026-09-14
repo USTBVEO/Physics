@@ -1,0 +1,50 @@
+{
+  "timeline": [
+    {
+      "id": "w2026s1-01",
+      "semester": "2026-2027-1",
+      "week": 1,
+      "date": "2026-08-31",
+      "title": "启程：运动的描述",
+      "chapter_ids": [
+        "bx1c1"
+      ],
+      "experiment": "",
+      "events": [
+        "ev-2026-first"
+      ],
+      "photos": [],
+      "teacher_quote": "从今天起，我们用三年时间一起看懂这个世界的运动。"
+    },
+    {
+      "id": "w2026s1-02",
+      "semester": "2026-2027-1",
+      "week": 2,
+      "date": "2026-09-07",
+      "title": "质点、位移与速度",
+      "chapter_ids": [
+        "bx1c1"
+      ],
+      "experiment": "打点计时器研究小车运动",
+      "events": [],
+      "photos": [
+        "assets/class_memories/2026/1789351770_微信图片_20260914100617_25_423.jpg"
+      ],
+      "teacher_quote": "先把复杂的世界简化成一个个点。"
+    },
+    {
+      "id": "w2026s1-03",
+      "semester": "2026-2027-1",
+      "week": 3,
+      "date": "2026-09-14",
+      "title": "加速度",
+      "chapter_ids": [
+        "bx1c1"
+      ],
+      "experiment": "手机传感器测量电梯加速度",
+      "events": [],
+      "photos": [],
+      "teacher_quote": ""
+    }
+  ]
+}

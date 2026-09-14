@@ -1,0 +1,54 @@
+{
+  "images": [
+    {
+      "id": "img-2026w01",
+      "title": "1927 年索尔维会议",
+      "file": "",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Solvay_conference_1927.jpg",
+      "description": "史上最著名的物理学合影：爱因斯坦与玻尔就量子力学展开世纪论战，居里夫人、普朗克、薛定谔、海森堡、狄拉克同框。人类智慧最密集的一张照片。",
+      "topic": "科学史",
+      "chapter_id": "bx1c1",
+      "tags": [
+        "科学史",
+        "近代物理",
+        "经典"
+      ],
+      "semester": "2026-2027-1",
+      "week": 1,
+      "first_shown": "2026-09-01",
+      "teacher_note": "告诉学生：照片里平均年龄不到 40 岁，科学是年轻人做出来的。"
+    },
+    {
+      "id": "img-2026w03",
+      "title": "地出 Earthrise（阿波罗 8 号，1968）",
+      "file": "",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/NASA-Apollo8-Dec24-Earthrise.jpg",
+      "description": "1968 年圣诞前夜，宇航员从月球轨道回望地球拍下的照片。从 38 万公里外看，加速度、速度、位移都属于同一颗蓝色星球上的我们。",
+      "topic": "天文学",
+      "chapter_id": "bx1c1",
+      "tags": [
+        "航天",
+        "经典",
+        "科学史"
+      ],
+      "semester": "2026-2027-1",
+      "week": 3,
+      "first_shown": "2026-09-14",
+      "teacher_note": "结合本章运动学：飞船的位移与参考系选择。"
+    },
+    {
+      "id": "img-2026w03-6ca9",
+      "title": "使用打点计时器",
+      "file": "assets/physics_images/2026/1789351642_微信图片_20260914100619_27_423.jpg",
+      "url": "",
+      "description": "",
+      "topic": "力学",
+      "chapter_id": "bx1c1",
+      "tags": [],
+      "semester": "2026-2027-1",
+      "week": 3,
+      "first_shown": "2026-09-14",
+      "teacher_note": ""
+    }
+  ]
+}

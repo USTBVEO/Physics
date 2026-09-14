@@ -1,0 +1,10 @@
+# 密钥与本地配置（绝不提交）
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# 本地临时产物
+index.html

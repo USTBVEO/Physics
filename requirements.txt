@@ -1,2 +1,5 @@
-streamlit
+streamlit>=1.39
 openai
+requests
+Pillow
+tzdata
