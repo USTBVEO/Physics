@@ -2,7 +2,9 @@
 import streamlit as st
 
 from core import repo, school_year
+from core.config import ROOT
 from core.models import section_index
+from core.repo import resolve_image_src
 from ui.style import inject_base, ACCENT
 
 inject_base()
@@ -54,7 +56,7 @@ for node in nodes:
                 unsafe_allow_html=True)
         if img:
             with head_r:
-                src = img.get("file") or img.get("url")
+                src = resolve_image_src(img)
                 if src:
                     try:
                         st.image(src, width="stretch")
@@ -74,6 +76,7 @@ for node in nodes:
             for pc, p in zip(pcols, photos):
                 with pc:
                     try:
-                        st.image(p, width="stretch")
+                        st.image(ROOT / p if not p.startswith("http") else p,
+                                  width="stretch")
                     except Exception:
                         pass

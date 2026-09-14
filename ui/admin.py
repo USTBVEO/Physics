@@ -78,7 +78,11 @@ def compress_image(raw: bytes, max_side: int = 1800, quality: int = 82) -> tuple
 
 
 def safe_name(name: str) -> str:
-    keep = "".join(ch if ch.isalnum() or ch in "._-" else "_" for ch in name)
+    """生成安全的文件名：仅保留 ASCII 字母数字和 ._-，其余替换为 _。"""
+    keep = "".join(
+        ch if (ord(ch) < 128 and (ch.isalnum() or ch in "._-")) else "_"
+        for ch in name
+    )
     return keep[-60:] or "file"
 
 

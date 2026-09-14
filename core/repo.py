@@ -2,10 +2,11 @@
 from __future__ import annotations
 
 import json
+from pathlib import Path
 
 import streamlit as st
 
-from core.config import DATA_DIR, DATA_FILES
+from core.config import DATA_DIR, DATA_FILES, ROOT
 from core.store import get_store
 
 _DEFAULTS: dict[str, dict] = {
@@ -51,3 +52,20 @@ def save_binary(rel_path: str, content: bytes, label: str) -> tuple[bool, str]:
 
 def store_name() -> str:
     return get_store().name
+
+
+def resolve_image_src(img: dict) -> str | Path | None:
+    """从图片记录中解析出可用于 st.image() 的源。
+
+    优先用本地 file 路径（转绝对 Path），其次用 url。
+    本地文件不存在时回退到 url。
+    """
+    file_path = img.get("file", "")
+    url = img.get("url", "")
+    if file_path:
+        p = ROOT / file_path
+        if p.exists():
+            return p
+    if url:
+        return url
+    return None

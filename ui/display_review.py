@@ -2,7 +2,9 @@
 import streamlit as st
 
 from core import repo
+from core.config import ROOT
 from core.models import section_index
+from core.repo import resolve_image_src
 from ui.style import inject_base, ACCENT
 
 inject_base()
@@ -55,12 +57,13 @@ with mc1:
         for pc, p in zip(pcols, photos):
             with pc:
                 try:
-                    st.image(p, width="stretch")
+                    st.image(ROOT / p if not p.startswith("http") else p,
+                              width="stretch")
                 except Exception:
                     pass
 with mc2:
     if img:
-        src = img.get("file") or img.get("url")
+        src = resolve_image_src(img)
         if src:
             try:
                 st.image(src, width="stretch")
