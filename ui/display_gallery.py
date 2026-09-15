@@ -2,7 +2,6 @@
 import streamlit as st
 
 from core import repo
-from core.repo import resolve_image_src
 from ui.style import inject_base
 
 inject_base()
@@ -40,7 +39,7 @@ filtered = [
 
 @st.dialog("物理图鉴 · 大图", width="large")
 def show_large(img: dict):
-    src = resolve_image_src(img)
+    src = repo.resolve_image_src(img)
     if src:
         try:
             st.image(src, width="stretch")
@@ -59,7 +58,7 @@ for row_start in range(0, len(filtered), ncols):
     cols = st.columns(ncols, gap="medium")
     for col, img in zip(cols, filtered[row_start:row_start + ncols]):
         with col:
-            src = resolve_image_src(img)
+            src = repo.resolve_image_src(img)
             if src:
                 try:
                     st.image(src, width="stretch")

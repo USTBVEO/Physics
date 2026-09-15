@@ -1,1 +1,1 @@
-from core import ai, config, models, repo, school_year, stats, store  # noqa: F401
+"""核心领域包。各子模块按需显式导入，避免整包预导入造成加载顺序问题。"""

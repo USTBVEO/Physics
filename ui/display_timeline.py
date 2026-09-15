@@ -4,7 +4,6 @@ import streamlit as st
 from core import repo, school_year
 from core.config import ROOT
 from core.models import section_index
-from core.repo import resolve_image_src
 from ui.style import inject_base, ACCENT
 
 inject_base()
@@ -56,7 +55,7 @@ for node in nodes:
                 unsafe_allow_html=True)
         if img:
             with head_r:
-                src = resolve_image_src(img)
+                src = repo.resolve_image_src(img)
                 if src:
                     try:
                         st.image(src, width="stretch")

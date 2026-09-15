@@ -3,7 +3,6 @@ import streamlit as st
 
 from core import repo, school_year, stats
 from core.config import WEEKDAY_CN
-from core.repo import resolve_image_src
 from ui.style import inject_base, inject_display
 
 inject_base()
@@ -75,7 +74,7 @@ if featured is None and images:
 
 with img_col:
     if featured:
-        src = resolve_image_src(featured)
+        src = repo.resolve_image_src(featured)
         if src:
             try:
                 st.image(src, width="stretch")
