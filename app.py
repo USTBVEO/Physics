@@ -1,4 +1,5 @@
 """「杨威的物理课堂」入口：全局配置 + 页面路由。"""
+# deploy trigger: force Streamlit Cloud redeploy 2026-09-16
 import streamlit as st
 
 from ui.style import inject_base
