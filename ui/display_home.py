@@ -12,15 +12,12 @@ data = repo.all_data()
 settings = data["settings"]
 today = school_year.today()
 week = school_year.teaching_week(settings, today)
-exam = school_year.next_exam(settings, today)
 grade = school_year.grade_name(settings, today)
 counts = stats.compute(data)
 
 # ---------- 顶栏 ----------
 grade_label = school_year.semester_grade_label(settings, today)
 week_html = f"WEEK {week}" if week else "假期中"
-exam_html = (f"距{exam[0]} <span class='accent'>{exam[1]}</span> 天" if exam and exam[1] > 0
-             else (f"{exam[0]} 加油" if exam else ""))
 st.markdown(
     f"""
     <div class="pw-topbar">
@@ -31,7 +28,6 @@ st.markdown(
         <div class="pw-top-item"><label>SEMESTER</label>{grade_label} · {grade}</div>
         <div class="pw-top-item"><label>WEEK</label><span class="accent">{week_html}</span></div>
         <div class="pw-top-item"><label>DATE</label>{school_year.today_label(today)}</div>
-        <div class="pw-top-item"><label>COMING</label>{exam_html}</div>
         <div class="pw-top-item"><label>LESSONS</label>累计第 <span class="accent">{counts['lessons']}</span> 节物理课</div>
     </div>
     """,

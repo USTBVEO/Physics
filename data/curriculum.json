@@ -1,23 +1,21 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "grades": [
     {
-      "grade": "高一",
-      "textbook": "人教版必修第一册",
+      "grade": "高一上",
+      "textbook": "必修第一册",
       "chapters": [
         {
-          "id": "bx1c1",
-          "name": "运动的描述",
+          "id": "bx1c1", "name": "第一章 运动的描述",
           "sections": [
             { "id": "bx1c1s1", "name": "质点 参考系", "core_concepts": ["质点", "参考系"] },
-            { "id": "bx1c1s2", "name": "时间 位移", "core_concepts": ["时刻", "时间间隔", "位移"] },
-            { "id": "bx1c1s3", "name": "速度", "core_concepts": ["平均速度", "瞬时速度"] },
+            { "id": "bx1c1s2", "name": "时间 位移", "core_concepts": ["时刻", "时间间隔", "位移", "矢量"] },
+            { "id": "bx1c1s3", "name": "位置变化快慢的描述——速度", "core_concepts": ["平均速度", "瞬时速度", "速率"] },
             { "id": "bx1c1s4", "name": "速度变化快慢的描述——加速度", "core_concepts": ["速度变化量", "加速度"] }
           ]
         },
         {
-          "id": "bx1c2",
-          "name": "匀变速直线运动的研究",
+          "id": "bx1c2", "name": "第二章 匀变速直线运动的研究",
           "sections": [
             { "id": "bx1c2s1", "name": "实验：探究小车速度随时间变化的规律" },
             { "id": "bx1c2s2", "name": "匀变速直线运动的速度与时间的关系" },
@@ -26,8 +24,7 @@
           ]
         },
         {
-          "id": "bx1c3",
-          "name": "相互作用——力",
+          "id": "bx1c3", "name": "第三章 相互作用——力",
           "sections": [
             { "id": "bx1c3s1", "name": "重力与弹力" },
             { "id": "bx1c3s2", "name": "摩擦力" },
@@ -37,25 +34,24 @@
           ]
         },
         {
-          "id": "bx1c4",
-          "name": "运动和力的关系",
+          "id": "bx1c4", "name": "第四章 运动和力的关系",
           "sections": [
             { "id": "bx1c4s1", "name": "牛顿第一定律" },
             { "id": "bx1c4s2", "name": "实验：探究加速度与力、质量的关系" },
             { "id": "bx1c4s3", "name": "牛顿第二定律" },
             { "id": "bx1c4s4", "name": "力学单位制" },
-            { "id": "bx1c4s5", "name": "超重和失重" }
+            { "id": "bx1c4s5", "name": "牛顿运动定律的应用" },
+            { "id": "bx1c4s6", "name": "超重和失重" }
           ]
         }
       ]
     },
     {
-      "grade": "高一",
-      "textbook": "人教版必修第二册",
+      "grade": "高一下",
+      "textbook": "必修第二册",
       "chapters": [
         {
-          "id": "bx2c5",
-          "name": "抛体运动",
+          "id": "bx2c5", "name": "第五章 抛体运动",
           "sections": [
             { "id": "bx2c5s1", "name": "曲线运动" },
             { "id": "bx2c5s2", "name": "运动的合成与分解" },
@@ -64,8 +60,7 @@
           ]
         },
         {
-          "id": "bx2c6",
-          "name": "圆周运动",
+          "id": "bx2c6", "name": "第六章 圆周运动",
           "sections": [
             { "id": "bx2c6s1", "name": "圆周运动" },
             { "id": "bx2c6s2", "name": "向心力" },
@@ -74,18 +69,17 @@
           ]
         },
         {
-          "id": "bx2c7",
-          "name": "万有引力与宇宙航行",
+          "id": "bx2c7", "name": "第七章 万有引力与宇宙航行",
           "sections": [
             { "id": "bx2c7s1", "name": "行星的运动" },
             { "id": "bx2c7s2", "name": "万有引力定律" },
-            { "id": "bx2c7s3", "name": "宇宙航行" },
-            { "id": "bx2c7s4", "name": "相对论时空观与牛顿力学的局限性" }
+            { "id": "bx2c7s3", "name": "万有引力理论的成就" },
+            { "id": "bx2c7s4", "name": "宇宙航行" },
+            { "id": "bx2c7s5", "name": "相对论时空观与牛顿力学的局限性" }
           ]
         },
         {
-          "id": "bx2c8",
-          "name": "机械能守恒定律",
+          "id": "bx2c8", "name": "第八章 机械能守恒定律",
           "sections": [
             { "id": "bx2c8s1", "name": "功与功率" },
             { "id": "bx2c8s2", "name": "重力势能" },
@@ -97,12 +91,11 @@
       ]
     },
     {
-      "grade": "高二",
-      "textbook": "人教版必修第三册",
+      "grade": "高二上",
+      "textbook": "必修第三册",
       "chapters": [
         {
-          "id": "bx3c9",
-          "name": "静电场及其应用",
+          "id": "bx3c9", "name": "第九章 静电场及其应用",
           "sections": [
             { "id": "bx3c9s1", "name": "电荷" },
             { "id": "bx3c9s2", "name": "库仑定律" },
@@ -111,8 +104,7 @@
           ]
         },
         {
-          "id": "bx3c10",
-          "name": "静电场中的能量",
+          "id": "bx3c10", "name": "第十章 静电场中的能量",
           "sections": [
             { "id": "bx3c10s1", "name": "电势能和电势" },
             { "id": "bx3c10s2", "name": "电势差" },
@@ -122,27 +114,26 @@
           ]
         },
         {
-          "id": "bx3c11",
-          "name": "电路及其应用",
+          "id": "bx3c11", "name": "第十一章 电路及其应用",
           "sections": [
             { "id": "bx3c11s1", "name": "电源和电流" },
             { "id": "bx3c11s2", "name": "导体的电阻" },
-            { "id": "bx3c11s3", "name": "串联电路和并联电路" },
-            { "id": "bx3c11s4", "name": "实验：练习使用多用电表" }
+            { "id": "bx3c11s3", "name": "实验：导体电阻率的测量" },
+            { "id": "bx3c11s4", "name": "串联电路和并联电路" },
+            { "id": "bx3c11s5", "name": "实验：练习使用多用电表" }
           ]
         },
         {
-          "id": "bx3c12",
-          "name": "电能 能量守恒定律",
+          "id": "bx3c12", "name": "第十二章 电能 能量守恒定律",
           "sections": [
             { "id": "bx3c12s1", "name": "电路中的能量转化" },
             { "id": "bx3c12s2", "name": "闭合电路的欧姆定律" },
-            { "id": "bx3c12s3", "name": "能源与可持续发展" }
+            { "id": "bx3c12s3", "name": "实验：电池电动势和内阻的测量" },
+            { "id": "bx3c12s4", "name": "能源与可持续发展" }
           ]
         },
         {
-          "id": "bx3c13",
-          "name": "电磁感应与电磁波初步",
+          "id": "bx3c13", "name": "第十三章 电磁感应与电磁波初步",
           "sections": [
             { "id": "bx3c13s1", "name": "磁场 磁感线" },
             { "id": "bx3c13s2", "name": "磁感应强度 磁通量" },
@@ -154,68 +145,69 @@
       ]
     },
     {
-      "grade": "高二",
-      "textbook": "人教版选择性必修第一册",
+      "grade": "高二下",
+      "textbook": "选择性必修第一册",
       "chapters": [
         {
-          "id": "xz1c1",
-          "name": "动量守恒定律",
+          "id": "xz1c1", "name": "第一章 动量守恒定律",
           "sections": [
             { "id": "xz1c1s1", "name": "动量" },
             { "id": "xz1c1s2", "name": "动量定理" },
             { "id": "xz1c1s3", "name": "动量守恒定律" },
-            { "id": "xz1c1s4", "name": "弹性碰撞和非弹性碰撞" }
+            { "id": "xz1c1s4", "name": "实验：验证动量守恒定律" },
+            { "id": "xz1c1s5", "name": "弹性碰撞和非弹性碰撞" },
+            { "id": "xz1c1s6", "name": "反冲现象 火箭" }
           ]
         },
         {
-          "id": "xz1c2",
-          "name": "机械振动",
+          "id": "xz1c2", "name": "第二章 机械振动",
           "sections": [
             { "id": "xz1c2s1", "name": "简谐运动" },
             { "id": "xz1c2s2", "name": "简谐运动的描述" },
-            { "id": "xz1c2s3", "name": "单摆" },
-            { "id": "xz1c2s4", "name": "受迫振动 共振" }
+            { "id": "xz1c2s3", "name": "简谐运动的回复力和能量" },
+            { "id": "xz1c2s4", "name": "单摆" },
+            { "id": "xz1c2s5", "name": "实验：用单摆测量重力加速度" },
+            { "id": "xz1c2s6", "name": "受迫振动 共振" }
           ]
         },
         {
-          "id": "xz1c3",
-          "name": "机械波",
+          "id": "xz1c3", "name": "第三章 机械波",
           "sections": [
-            { "id": "xz1c3s1", "name": "波的形成和描述" },
-            { "id": "xz1c3s2", "name": "波的反射、折射和衍射" },
-            { "id": "xz1c3s3", "name": "波的干涉" },
-            { "id": "xz1c3s4", "name": "多普勒效应" }
+            { "id": "xz1c3s1", "name": "波的形成" },
+            { "id": "xz1c3s2", "name": "波的描述" },
+            { "id": "xz1c3s3", "name": "波的反射、折射和衍射" },
+            { "id": "xz1c3s4", "name": "波的干涉" },
+            { "id": "xz1c3s5", "name": "多普勒效应" }
           ]
         },
         {
-          "id": "xz1c4",
-          "name": "光",
+          "id": "xz1c4", "name": "第四章 光",
           "sections": [
             { "id": "xz1c4s1", "name": "光的折射" },
             { "id": "xz1c4s2", "name": "全反射" },
             { "id": "xz1c4s3", "name": "光的干涉" },
-            { "id": "xz1c4s4", "name": "光的衍射" },
-            { "id": "xz1c4s5", "name": "光的偏振 激光" }
+            { "id": "xz1c4s4", "name": "实验：用双缝干涉测量光的波长" },
+            { "id": "xz1c4s5", "name": "光的衍射" },
+            { "id": "xz1c4s6", "name": "光的偏振 激光" }
           ]
         }
       ]
     },
     {
-      "grade": "高三",
-      "textbook": "人教版选择性必修第二册",
+      "grade": "高三上",
+      "textbook": "选择性必修第二册",
       "chapters": [
         {
-          "id": "xz2c1",
-          "name": "安培力与洛伦兹力",
+          "id": "xz2c1", "name": "第一章 安培力与洛伦兹力",
           "sections": [
             { "id": "xz2c1s1", "name": "磁场对通电导线的作用力" },
             { "id": "xz2c1s2", "name": "磁场对运动电荷的作用力" },
-            { "id": "xz2c1s3", "name": "带电粒子在匀强磁场中的运动" }
+            { "id": "xz2c1s3", "name": "带电粒子在匀强磁场中的运动" },
+            { "id": "xz2c1s4", "name": "质谱仪与回旋加速器" }
           ]
         },
         {
-          "id": "xz2c2",
-          "name": "电磁感应",
+          "id": "xz2c2", "name": "第二章 电磁感应",
           "sections": [
             { "id": "xz2c2s1", "name": "楞次定律" },
             { "id": "xz2c2s2", "name": "法拉第电磁感应定律" },
@@ -224,8 +216,7 @@
           ]
         },
         {
-          "id": "xz2c3",
-          "name": "交变电流",
+          "id": "xz2c3", "name": "第三章 交变电流",
           "sections": [
             { "id": "xz2c3s1", "name": "交变电流" },
             { "id": "xz2c3s2", "name": "交变电流的描述" },
@@ -234,72 +225,74 @@
           ]
         },
         {
-          "id": "xz2c4",
-          "name": "电磁振荡与电磁波",
+          "id": "xz2c4", "name": "第四章 电磁振荡与电磁波",
           "sections": [
             { "id": "xz2c4s1", "name": "电磁振荡" },
-            { "id": "xz2c4s2", "name": "电磁波的发现及应用" },
-            { "id": "xz2c4s3", "name": "无线电波的发射和接收" }
+            { "id": "xz2c4s2", "name": "电磁场与电磁波" },
+            { "id": "xz2c4s3", "name": "无线电波的发射和接收" },
+            { "id": "xz2c4s4", "name": "电磁波谱" }
+          ]
+        },
+        {
+          "id": "xz2c5", "name": "第五章 传感器",
+          "sections": [
+            { "id": "xz2c5s1", "name": "认识传感器" },
+            { "id": "xz2c5s2", "name": "常见传感器的工作原理及应用" },
+            { "id": "xz2c5s3", "name": "利用传感器制作简单的自动控制装置" }
           ]
         }
       ]
     },
     {
-      "grade": "高三",
-      "textbook": "人教版选择性必修第三册",
+      "grade": "高三下",
+      "textbook": "选择性必修第三册",
       "chapters": [
         {
-          "id": "xz3c1",
-          "name": "分子动理论",
+          "id": "xz3c1", "name": "第一章 分子动理论",
           "sections": [
-            { "id": "xz3c1s1", "name": "分子动理论的基本观点" },
-            { "id": "xz3c1s2", "name": "分子的热运动" },
-            { "id": "xz3c1s3", "name": "分子间的作用力" }
+            { "id": "xz3c1s1", "name": "分子动理论的基本内容" },
+            { "id": "xz3c1s2", "name": "实验：用油膜法估测油酸分子的大小" },
+            { "id": "xz3c1s3", "name": "分子运动速率分布规律" },
+            { "id": "xz3c1s4", "name": "分子动能和分子势能" }
           ]
         },
         {
-          "id": "xz3c2",
-          "name": "气体、固体和液体",
+          "id": "xz3c2", "name": "第二章 气体、固体和液体",
           "sections": [
             { "id": "xz3c2s1", "name": "温度和温标" },
             { "id": "xz3c2s2", "name": "气体的等温变化" },
-            { "id": "xz3c2s3", "name": "固体和液体" }
+            { "id": "xz3c2s3", "name": "气体的等压变化和等容变化" },
+            { "id": "xz3c2s4", "name": "固体" },
+            { "id": "xz3c2s5", "name": "液体" }
           ]
         },
         {
-          "id": "xz3c3",
-          "name": "热力学定律",
+          "id": "xz3c3", "name": "第三章 热力学定律",
           "sections": [
             { "id": "xz3c3s1", "name": "功、热和内能的改变" },
             { "id": "xz3c3s2", "name": "热力学第一定律" },
-            { "id": "xz3c3s3", "name": "热力学第二定律" }
+            { "id": "xz3c3s3", "name": "能量守恒定律" },
+            { "id": "xz3c3s4", "name": "热力学第二定律" }
           ]
         },
         {
-          "id": "xz3c4",
-          "name": "原子结构和波粒二象性",
+          "id": "xz3c4", "name": "第四章 原子结构和波粒二象性",
           "sections": [
             { "id": "xz3c4s1", "name": "普朗克黑体辐射理论" },
             { "id": "xz3c4s2", "name": "光电效应" },
             { "id": "xz3c4s3", "name": "原子的核式结构模型" },
-            { "id": "xz3c4s4", "name": "微观世界的波粒二象性" }
+            { "id": "xz3c4s4", "name": "氢原子光谱和玻尔的原子模型" },
+            { "id": "xz3c4s5", "name": "粒子的波动性和量子力学的建立" }
           ]
         },
         {
-          "id": "xz3c5",
-          "name": "原子核",
+          "id": "xz3c5", "name": "第五章 原子核",
           "sections": [
             { "id": "xz3c5s1", "name": "原子核的组成" },
             { "id": "xz3c5s2", "name": "放射性元素的衰变" },
-            { "id": "xz3c5s3", "name": "核反应 核能" }
-          ]
-        },
-        {
-          "id": "xz3c6",
-          "name": "粒子与宇宙",
-          "sections": [
-            { "id": "xz3c6s1", "name": "粒子和宇宙" },
-            { "id": "xz3c6s2", "name": "核力与结合能" }
+            { "id": "xz3c5s3", "name": "核力与结合能" },
+            { "id": "xz3c5s4", "name": "核裂变与核聚变" },
+            { "id": "xz3c5s5", "name": "\"基本\"粒子" }
           ]
         }
       ]
